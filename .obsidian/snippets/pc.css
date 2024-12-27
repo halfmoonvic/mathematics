@@ -1,0 +1,214 @@
+body:not(.is-mobile) {
+	/* font size set by appearance option */
+	/* text font size of body content */
+	--font-text-size: 18px !important;
+
+	/* settings font size */
+	--font-ui-medium: 16px !important;
+
+	/* statusbar sidebar font size */
+	--font-ui-small: 16px !important;
+
+	/* statusbar right font size */
+	--font-ui-smaller: 14px !important;
+
+	/* text content line height */
+	--line-height: 1.618 !important;
+
+	/* text content line height, used by default */
+	--line-height-normal: var(--line-height) !important;
+
+	/* the spacing between each list-item */
+	/* used by default、 atom、 minimal */
+	--list-spacing: 0.5em;
+	--list-spacing-large: 1em;
+
+	/* the spacing between each p, list content <br/> */
+	/* used by default、 atom、 minimal */
+	/* --p-spacing: 0.5em;*/
+	--p-spacing: 0.8em;
+
+	/* set Readable line length with false, Limit maximum line length */
+	--file-margins: 0.5em 2em !important;
+
+	/* set Readable line length with true, Limit maximum line length */
+	/* --file-margins: 2rem 0 0 0 !important; */
+	/* --view-width: 85%; */
+	/* used by default blue_topaz */
+	/* --file-line-width: var(--view-width); */
+	/* used by minimal */
+	/* --line-width: var(--view-width) !important; */
+}
+
+/********** editor UI **********/
+
+/* header */
+body:not(.is-mobile) div > :is(h1, h2, h3, h4, h5, h6) {
+	--heading-spacing: 2em;
+	margin-top: var(--heading-spacing);
+}
+
+/* list */
+body:not(.is-mobile) .markdown-rendered {
+	& li:has(> p:nth-child(2), > br),
+	& li:has(> p:nth-child(2), > br) ~ li {
+		padding-top: var(--list-spacing-large);
+		padding-bottom: var(--list-spacing);
+	}
+
+	& li p:first-of-type {
+		margin-bottom: var(--list-spacing);
+	}
+}
+
+/* sidebar tree */
+body:not(.is-mobile) .tree-item {
+	--nav-item-padding: 6px 8px 6px 24px;
+}
+body:not(.is-mobile).theme-dark .tree-item {
+	--nav-item-color: #bababa !important;
+}
+body:not(.is-mobile).theme-light .tree-item {
+	--nav-item-color: #484a4c !important;
+}
+
+/* status bar */
+body:not(.is-mobile).theme-light .status-bar {
+	--text-faint: #323232;
+	--text-muted: #323232;
+	/* color: #323232; */
+}
+body:not(.is-mobile).theme-dark .status-bar {
+	--text-faint: #dfdfdf;
+	--text-muted: #dfdfdf;
+	/* color: #dfdfdf; */
+}
+body:not(.is-mobile) .status-bar .plugin-remotely-save {
+	display: none;
+}
+
+/* file title */
+body:not(.is-mobile) .inline-title {
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid;
+	color: #eb5454;
+}
+
+/* indentation, like onenote word */
+body:not(.is-mobile) .markdown-rendered {
+	& div:has(> :is(h1, h2, h3, h4, h5, h6)) ~ div {
+		& > blockquote,
+		& > p,
+		& > pre,
+		& > table {
+			margin-left: 40px;
+		}
+	}
+
+	& div:has(> :is(h1, h2, h3, h4, h5, h6)) ~ div {
+		& > ul,
+		& > ol {
+			margin-left: 10px;
+		}
+	}
+}
+
+/********** HTML Element **********/
+
+/* image */
+body:not(.is-mobile).theme-dark img {
+	opacity: 1 !important;
+	background-color: #fff;
+}
+
+/* video */
+body:not(.is-mobile) video {
+	width: 100%;
+	max-height: 780px;
+	background-color: var(--background-secondary);
+}
+
+/* table */
+body:not(.is-mobile) table {
+	--table-cell-padding: 13px 20px;
+	--table-header-border-width: 1px;
+	--table-row-last-border-width: 1px;
+	--table-column-first-border-width: 1px;
+	--table-column-last-border-width: 1px;
+
+	& td,
+	& th {
+		padding: var(--table-cell-padding) !important;
+	}
+}
+body:not(.is-mobile) table tr:nth-child(2n) {
+	/* light #efefef */
+	/* dark #1b1b1b */
+	background-color: var(--background-primary-alt) !important;
+}
+
+/* strong b */
+body:not(.is-mobile) {
+	--font-normal: 300;
+	--bold-color: var(--color-pink);
+
+	&.theme-light {
+		& b,
+		& strong {
+			/* --color-pink: #d53984; */
+			/* color: #e93147;*/
+			/* color: #0d0d0d;*/
+			color: var(--color-pink);
+			font-weight: var(--font-normal);
+		}
+	}
+
+	&.theme-dark {
+		& b,
+		& strong {
+			/* --color-pink: #fa99cd; */
+			/* color: #fb464c;*/
+			/* color: #ececec;*/
+			color: var(--color-pink);
+			font-weight: var(--font-normal);
+		}
+	}
+}
+
+/* inline code */
+body:not(.is-mobile) :not(pre) > code {
+	background: transparent !important;
+}
+
+/* for chatgpt answer */
+body:not(.is-mobile) div:has(> hr.__chatgpt_plugin) + div:has(> p) > p {
+	color: #f88;
+}
+
+/* always show header tile, for minimal */
+body:not(.is-mobile) .view-header-title-container {
+	opacity: 1;
+}
+
+/* obsidian-git diff view style plugin */
+.d2h-file-diff .d2h-diff-table {
+	--table-cell-padding: 3px !important;
+	font-size: var(--font-ui-medium) !important;
+	font-family:
+		'YaHei Consolas Hybrid',
+		'PingFang SC',
+		'PingFang SC',
+		'Input Mono',
+		ui-sans-serif,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Inter,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Microsoft YaHei Light',
+		sans-serif !important;
+}

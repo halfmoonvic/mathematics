@@ -1,0 +1,33 @@
+# Add below lines to exclude OS settings and caches
+.trash
+.history
+.DS_Store
+
+# temp file
+__MACOSX
+*obsidian.*
+~$*
+
+# ide
+.vscode
+
+# ignore root vault configurations
+.obsidian/*
+
+# unignore root vault some configurations
+!.obsidian/app.json
+!.obsidian/hotkeys.json
+!.obsidian/snippets
+
+!.obsidian/daily-notes.json
+!.obsidian/templates.json
+
+# ignore sub vault configurations
+*/**/.obsidian
+*/**/.prettierrc
+*/**/.editorconfig
+
+# ignore frequently changed files
+# **/.obsidian/workspace.json
+# **/.obsidian/workspace-mobile.json
+# **/.obsidian/plugins/*/data.json

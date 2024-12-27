@@ -1,0 +1,36 @@
+/********** minimal style **********/
+
+body {
+	--h1-size: 1.125em;
+	--h2-size: 1.05em;
+	--h3-size: 1em;
+	--h4-size: 0.9em;
+	--h5-size: 0.85em;
+	--h6-size: 0.85em;
+
+	/* minimal */
+	/* --h1-color: #e45749; */
+	/* --h2-color: #b76b02; */
+	/* --h3-color: #c18302; */
+	/* --h4-color: #50a150; */
+	/* --h5-color: #62afef; */
+	/* --h6-color: #a626a4; */
+}
+
+/* onenote */
+.theme-light {
+	--h1-color: #1e4e79 !important;
+	--h2-color: #2e75b5 !important;
+	--h3-color: #3b5897 !important;
+	--h4-color: #294a8b !important;
+	--h5-color: #296aac !important;
+	--h6-color: #296aac !important;
+}
+.theme-dark {
+	--h1-color: #b2d0eb !important;
+	--h2-color: #69a4d8 !important;
+	--h3-color: #c8d5ef !important;
+	--h4-color: #92b1dd !important;
+	--h5-color: #69a4d8 !important;
+	--h6-color: #69a4d8 !important;
+}

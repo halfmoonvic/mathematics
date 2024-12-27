@@ -1,0 +1,60 @@
+body.is-mobile {
+	/* obsidian basic ui settings */
+	/* font size set by appearance option */
+	--font-text-size: 18px !important;
+
+	/* settings font size */
+	--font-ui-medium: 14px !important;
+
+	/* statusbar sidebar font size */
+	--font-ui-small: 12px !important;
+
+	/* text content line height */
+	--line-height: 1.6 !important;
+
+	/* the spacing between each list-item */
+	/* used by default、 atom、 minimal */
+	--list-spacing: 0.3em;
+	--list-spacing-large: 0.6em;
+
+	/* the spacing between each p, list content <br/> */
+	/* used by default、 atom、 minimal */
+	--p-spacing: 0.6em;
+}
+
+/********** editor UI **********/
+
+/* header */
+body.is-mobile div > :is(h1, h2, h3, h4, h5, h6) {
+	--heading-spacing: 1.5em;
+	margin-top: var(--heading-spacing);
+}
+
+/* list */
+body.is-mobile .markdown-rendered {
+	& li:has(> p:nth-child(2), > br),
+	& li:has(> p:nth-child(2), > br) ~ li {
+		padding-top: var(--list-spacing-large);
+		padding-bottom: var(--list-spacing);
+	}
+
+	& li p:first-of-type {
+		margin-bottom: var(--list-spacing);
+	}
+}
+
+/********** HTML Element **********/
+
+/* image */
+body.is-mobile.theme-dark img {
+	opacity: 1 !important;
+	background-color: #fff;
+}
+
+/* table */
+body.is-mobile.theme-light table tr:nth-child(2n) {
+	background-color: #efefef !important;
+}
+body.is-mobile.theme-dark table tr:nth-child(2n) {
+	background-color: #1b1b1b !important;
+}

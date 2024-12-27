@@ -1,0 +1,30 @@
+{
+  "vimMode": true,
+  "readableLineLength": false,
+  "strictLineBreaks": true,
+  "promptDelete": false,
+  "defaultViewMode": "preview",
+  "trashOption": "system",
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./assets",
+  "livePreview": true,
+  "spellcheck": true,
+  "useTab": true,
+  "tabSize": 4,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 50
+  },
+  "showFrontmatter": true,
+  "legacyEditor": false,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": true,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "showInlineTitle": true,
+  "propertiesInDocument": "visible",
+  "useMarkdownLinks": false
+}
